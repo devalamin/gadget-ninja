@@ -1,0 +1,343 @@
+[
+    {
+      "product_id": "P001",
+      "product_title": "Samsung Galaxy A14",
+      "product_image": "https://i.ibb.co/yBPmncdZ/61uakk-Lo-Hx-L-AC-UY327-FMwebp-QL65.webp",
+      "category": "Smartphones",
+      "price": 199,
+      "description": "A budget-friendly smartphone with essential features.",
+      "specification": [
+        "6.6-inch PLS LCD display",
+        "Exynos 850 Processor",
+        "50MP + 2MP + 2MP triple-camera",
+        "5000mAh battery",
+        "128GB storage"
+      ],
+      "availability": true,
+      "rating": 4.5
+    },
+    {
+      "product_id": "P002",
+      "product_title": "Xiaomi Redmi 12C",
+      "product_image": "https://i.ibb.co/4RybzQ9c/61xk4-XNRkt-L-AC-UY327-FMwebp-QL65.webp",
+      "category": "Smartphones",
+      "price": 149,
+      "description": "A powerful budget smartphone with a large display.",
+      "specification": [
+        "6.71-inch IPS LCD",
+        "MediaTek Helio G85",
+        "50MP + 2MP dual-camera",
+        "5000mAh battery",
+        "128GB storage"
+      ],
+      "availability": true,
+      "rating": 4.4
+    },
+    {
+      "product_id": "P003",
+      "product_title": "Realme C35",
+      "product_image": "https://i.ibb.co/M55L7dwy/71-Sbx9z-QN3-L-AC-UY327-FMwebp-QL65.webp",
+      "category": "Smartphones",
+      "price": 179,
+      "description": "A stylish budget smartphone with a Full HD+ display.",
+      "specification": [
+        "6.6-inch IPS LCD",
+        "Unisoc T616 Processor",
+        "50MP AI camera",
+        "5000mAh battery",
+        "128GB storage"
+      ],
+      "availability": true,
+      "rating": 4.3
+    },
+    {
+      "product_id": "P004",
+      "product_title": "Motorola Moto G Power",
+      "product_image": "https://i.ibb.co/kvmy76d/61fh21u3-DJL-AC-UY327-FMwebp-QL65.webp",
+      "category": "Smartphones",
+      "price": 189,
+      "description": "A phone with excellent battery life and a great display.",
+      "specification": [
+        "6.5-inch IPS LCD",
+        "Snapdragon 662",
+        "48MP + 2MP + 2MP triple-camera",
+        "5000mAh battery",
+        "64GB storage"
+      ],
+      "availability": true,
+      "rating": 4.2
+    },
+    {
+      "product_id": "P005",
+      "product_title": "Dell XPS 13",
+      "product_image": "https://i.ibb.co/fYZYhbVB/712-P6-GANY1-L-AC-UL480-FMwebp-QL65.webp",
+      "category": "Laptops",
+      "price": 1299,
+      "description": "A premium ultra-portable laptop with excellent performance.",
+      "specification": [
+        "13.4-inch 4K display",
+        "Intel Core i7 processor",
+        "16GB RAM",
+        "512GB SSD",
+        "Intel Iris Xe Graphics"
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": "P006",
+      "product_title": "Apple MacBook Air M1",
+      "product_image": "https://i.ibb.co/JRWxN7y5/81-J4-NJ9-Zi-GL-AC-UY327-FMwebp-QL65.webp",
+      "category": "Laptops",
+      "price": 999,
+      "description": "Lightweight and powerful laptop with Apple's M1 chip.",
+      "specification": [
+        "13.3-inch Retina display",
+        "Apple M1 chip",
+        "8GB RAM",
+        "256GB SSD",
+        "Up to 18 hours battery life"
+      ],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": "P007",
+      "product_title": "HP Spectre x360",
+      "product_image": "https://i.ibb.co/Kz3Q9wVr/815u-X7wk-OZS-AC-UY327-FMwebp-QL65.webp",
+      "category": "Laptops",
+      "price": 1499,
+      "description": "A 2-in-1 convertible laptop with a stunning display.",
+      "specification": [
+        "13.3-inch 4K OLED display",
+        "Intel Core i7 processor",
+        "16GB RAM",
+        "512GB SSD",
+        "Intel Iris Plus Graphics"
+      ],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": "P008",
+      "product_title": "Lenovo ThinkPad X1 Carbon",
+      "product_image": "https://i.ibb.co/c7z1vJt/61g-Kk-YQn6l-L-AC-UY327-FMwebp-QL65.webp",
+      "category": "Laptops",
+      "price": 1699,
+      "description": "A business-focused laptop with exceptional performance and durability.",
+      "specification": [
+        "14-inch Full HD display",
+        "Intel Core i7 processor",
+        "16GB RAM",
+        "1TB SSD",
+        "Intel UHD Graphics"
+      ],
+      "availability": true,
+      "rating": 4.5
+    },
+    {
+      "product_id": "P009",
+      "product_title": "Apple AirPods 2",
+      "product_image": "https://i.ibb.co/VY1TpV7n/5181-ILcy-QJL-AC-UY327-FMwebp-QL65.webp",
+      "category": "Earbuds",
+      "price": 129,
+      "description": "Wireless earbuds with high-quality sound and seamless Apple integration.",
+      "specification": [
+        "Bluetooth 5.0",
+        "Up to 5 hours battery life",
+        "Automatic device switching",
+        "Siri voice assistant",
+        "Lightning charging case"
+      ],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": "P010",
+      "product_title": "JBL Tune 230NC",
+      "product_image": "https://i.ibb.co/HLf44Mkw/71-U5p3-Pxk-L-AC-UY327-FMwebp-QL65.webp",
+      "category": "Earbuds",
+      "price": 99,
+      "description": "Active noise-canceling wireless earbuds with deep bass.",
+      "specification": [
+        "Bluetooth 5.1",
+        "Active Noise Cancelling",
+        "Up to 40 hours battery life",
+        "IPX4 water resistance",
+        "USB-C fast charging"
+      ],
+      "availability": true,
+      "rating": 4.5
+    },
+    {
+      "product_id": "P011",
+      "product_title": "Anker Soundcore Life P2",
+      "product_image": "https://i.ibb.co/KzBf4RqV/61a-Fc-D5ju9-L-AC-UY327-FMwebp-QL65.webp",
+      "category": "Earbuds",
+      "price": 79,
+      "description": "True wireless earbuds with deep bass and clear calls.",
+      "specification": [
+        "Bluetooth 5.0",
+        "Water-resistant",
+        "7-hour battery life per charge",
+        "CVC 8.0 Noise Reduction",
+        "USB-C fast charging"
+      ],
+      "availability": true,
+      "rating": 4.4
+    },
+    {
+      "product_id": "P012",
+      "product_title": "Sony WF-C500",
+      "product_image": "https://i.ibb.co/j9Xb4H9v/71-ym-ZOU3-RL-AC-UY327-FMwebp-QL65.webp",
+      "category": "Earbuds",
+      "price": 99,
+      "description": "Wireless earbuds with excellent sound quality and comfort.",
+      "specification": [
+        "Bluetooth 5.2",
+        "DSEE sound enhancement",
+        "Up to 20 hours battery life",
+        "IPX4 water resistance",
+        "USB-C fast charging"
+      ],
+      "availability": true,
+      "rating": 4.5
+    },
+    {
+      "product_id": "P013",
+      "product_title": "Samsung Galaxy Watch 4",
+      "product_image": "https://i.ibb.co/vv3DWgPm/61-Upvra-Yd-LL-AC-UY327-FMwebp-QL65.webp",
+      "category": "Smartwatches",
+      "price": 199,
+      "description": "A smartwatch with fitness tracking and advanced health features.",
+      "specification": [
+        "1.4-inch AMOLED display",
+        "BioActive Sensor",
+        "Sleep tracking",
+        "GPS and NFC",
+        "Up to 40 hours battery life"
+      ],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": "P014",
+      "product_title": "Amazfit Bip 3 Pro",
+      "product_image": "https://i.ibb.co/V7wt1GR/613-G3-YAzwg-L-AC-UY327-FMwebp-QL65.webp",
+      "category": "Smartwatches",
+      "price": 79,
+      "description": "A lightweight smartwatch with GPS and fitness tracking.",
+      "specification": [
+        "1.69-inch TFT display",
+        "Built-in GPS",
+        "Heart rate and SpO2 monitoring",
+        "50m water resistance",
+        "Up to 14 days battery life"
+      ],
+      "availability": true,
+      "rating": 4.3
+    },
+    {
+      "product_id": "P015",
+      "product_title": "Fitbit Versa 3",
+      "product_image": "https://i.ibb.co/SDrrpJDR/51-OFELc9sv-L-AC-UY327-FMwebp-QL65.webp",
+      "category": "Smartwatches",
+      "price": 229,
+      "description": "Smartwatch with built-in GPS, fitness tracking, and voice assistant.",
+      "specification": [
+        "1.58-inch AMOLED display",
+        "Built-in GPS",
+        "Heart rate monitoring",
+        "Voice assistant integration",
+        "Up to 6 days battery life"
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": "P016",
+      "product_title": "Garmin Forerunner 45",
+      "product_image": "https://i.ibb.co/LzzZmRBb/71-Nd69-7-Yi-L-AC-UY327-FMwebp-QL65.webp",
+      "category": "Smartwatches",
+      "price": 199,
+      "description": "A running-focused smartwatch with GPS and heart rate monitoring.",
+      "specification": [
+        "1.04-inch color display",
+        "Built-in GPS",
+        "Heart rate monitoring",
+        "Up to 7 days battery life",
+        "Water-resistant up to 50m"
+      ],
+      "availability": true,
+      "rating": 4.4
+    },
+    {
+      "product_id": "P017",
+      "product_title": "Razer BlackWidow V3",
+      "product_image": "https://i.ibb.co/f5NKkZ9/71ehwf-AM4-L-AC-UY327-FMwebp-QL65.webp",
+      "category": "Keyboards",
+      "price": 129,
+      "description": "A mechanical keyboard with RGB backlighting and tactile keys.",
+      "specification": [
+        "RGB Chroma backlighting",
+        "Razer Green switches",
+        "Dedicated media controls",
+        "Customizable keycaps",
+        "USB pass-through port"
+      ],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": "P018",
+      "product_title": "Corsair K95 RGB Platinum",
+      "product_image": "https://i.ibb.co/nsPPNX4J/61fie1u7-QAL-AC-UY327-FMwebp-QL65.webp",
+      "category": "Keyboards",
+      "price": 179,
+      "description": "A premium mechanical keyboard with dynamic RGB lighting.",
+      "specification": [
+        "RGB backlighting",
+        "Cherry MX switches",
+        "Dedicated media controls",
+        "Customizable macro keys",
+        "USB pass-through port"
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": "P019",
+      "product_title": "Logitech G Pro X",
+      "product_image": "https://i.ibb.co/TC5dkGL/71axun-q-TXL-AC-UY327-FMwebp-QL65.webp",
+      "category": "Keyboards",
+      "price": 149,
+      "description": "A mechanical keyboard with blue switches and customizable RGB lighting.",
+      "specification": [
+        "RGB backlighting",
+        "Blue switches",
+        "Detachable cable",
+        "Dedicated media controls",
+        "Customizable macros"
+      ],
+      "availability": true,
+      "rating": 4.5
+    },
+    {
+      "product_id": "P020",
+      "product_title": "SteelSeries Apex Pro",
+      "product_image": "https://i.ibb.co/PL4D3LK/61qh-Xbk-Jv-TL-AC-UY327-FMwebp-QL65.webp",
+      "category": "Keyboards",
+      "price": 249,
+      "description": "A high-end keyboard with mechanical switches and advanced RGB customization.",
+      "specification": [
+        "RGB backlighting",
+        "OmniPoint adjustable switches",
+        "Dedicated media controls",
+        "Aluminum frame",
+        "Customizable macros"
+      ],
+      "availability": true,
+      "rating": 4.8
+    }
+  ]
+  
