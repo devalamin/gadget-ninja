@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { FaCartArrowDown } from "react-icons/fa6";
 import { CiHeart } from "react-icons/ci";
 import Banner from '../Banner/Banner';
@@ -19,7 +19,7 @@ const NavBar = () => {
                     </div>
                     <div>
                         <div className='flex text-2xl space-x-4'>
-                            <FaCartArrowDown className='text-black bg-white h-10 w-10 p-2 rounded-full' />
+                                <Link to='/cart'><FaCartArrowDown className='text-black bg-white h-10 w-10 p-2 rounded-full' /></Link>
                             <CiHeart className='text-black bg-white h-10 w-10 p-2 rounded-full'></CiHeart>
                         </div>
                     </div>
