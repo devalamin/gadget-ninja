@@ -14,14 +14,15 @@ const ProductDetails = () => {
 
     const { rating, product_title, product_image, price, description, specification } = product;
 
-    const { setProduct } = useContext(ProductContext)
+    const { cartProduct, setCartProduct } = useContext(ProductContext)
+
 
     const handleSetProductToContext = (product) => {
-        setProduct(product)
+        setCartProduct([...cartProduct, product])
 
         toast(`SuccessFully Added To Cart ${product_title}`)
     }
-
+    console.log(cartProduct);
 
     return (
 
@@ -58,6 +59,7 @@ const ProductDetails = () => {
                         readonly
                         emptySymbol={<FaRegStar />}
                         fullSymbol={<FaStar />}
+
 
                     ></Rating>
                     <span className='px-2 py-1 ml-2 bg-slate-200'>{rating}</span>
