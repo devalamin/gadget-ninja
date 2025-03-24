@@ -4,6 +4,7 @@ import Rating from 'react-rating';
 import { useLoaderData, useParams } from 'react-router-dom';
 import { ProductContext } from '../Context/ProductContext';
 import { Bounce, toast } from 'react-toastify';
+import { Helmet } from 'react-helmet';
 // var Rating = require('react-rating');
 const ProductDetails = () => {
     const { id } = useParams()
@@ -43,10 +44,14 @@ const ProductDetails = () => {
         })
     }
 
-   
+
     return (
 
         <div className='bg-[#9538E2] pb-40 relative mb-96'>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Ninja | Product Details</title>
+            </Helmet>
             <div className=' w-11/12 mx-auto'>
                 <div className='text-center text-white '>
                     <h1 className='text-4xl font-bold'>Product Details</h1>
