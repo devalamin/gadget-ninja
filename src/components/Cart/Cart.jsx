@@ -7,20 +7,26 @@ import { FaSortAmountDown } from "react-icons/fa";
 
 const Cart = () => {
 
-    const { cartProduct } = useContext(ProductContext)
-    console.log(cartProduct);
+    const { cartProduct, setCartProduct } = useContext(ProductContext)
+
 
     const [mainProduct, setMainProduct] = useState(cartProduct)
+
     const handleSortByPrice = () => {
-        const sortedProducts = [...cartProduct].sort((a, b) => b.price - a.price)
+        const sortedProducts = [...mainProduct].sort((a, b) => b.price - a.price)
         setMainProduct(sortedProducts)
     }
 
     let totalPrice = 0;
 
-    for (const product of cartProduct) {
-        // console.log(product.price);
+    for (const product of mainProduct) {
         totalPrice += product.price
+    }
+
+    const handleRemoveFromCart = (id) => {
+        const remainingItems = mainProduct.filter(product => product.product_id !== id)
+        setMainProduct(remainingItems)
+        setCartProduct(remainingItems)
     }
 
 
@@ -56,6 +62,7 @@ const Cart = () => {
                 {
                     mainProduct?.map(product => <CartItem key={product.product_id}
                         product={product}
+                        handleRemoveFromCart={handleRemoveFromCart}
                     ></CartItem>)
                 }
             </div>

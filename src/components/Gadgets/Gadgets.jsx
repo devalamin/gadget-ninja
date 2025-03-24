@@ -14,7 +14,7 @@ const Gadgets = () => {
                 setOriginalGadgets(data)
             })
     }, [])
-    // console.log(gadgets);
+    
 
     const handleSortGadget = gName => {
         if (gName === 'all') {

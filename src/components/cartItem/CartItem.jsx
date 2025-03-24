@@ -2,9 +2,14 @@ import React from 'react';
 import { TbXboxX } from "react-icons/tb";
 
 
-const CartItem = ({ product }) => {
+const CartItem = ({ product, handleRemoveFromCart }) => {
 
-    const { product_title, product_image, description, price } = product
+    const { product_title, product_image, description, price, product_id } = product;
+
+
+    
+
+
     return (
         <div>
             <div className='w-9/12 mx-auto'>
@@ -24,7 +29,7 @@ const CartItem = ({ product }) => {
                         </div>
                         <div className="tooltip" data-tip="Remove From Cart">
                             <button>
-                                <TbXboxX className='text-3xl cursor-pointer text-red-600 font-bold'></TbXboxX>
+                                <TbXboxX onClick={() => handleRemoveFromCart(product_id)} className='text-3xl cursor-pointer text-red-600 font-bold'></TbXboxX>
                             </button>
                         </div>
                     </div>

@@ -42,8 +42,8 @@ const ProductDetails = () => {
             autoClose: 1000,
         })
     }
-    console.log(cartProduct);
 
+   
     return (
 
         <div className='bg-[#9538E2] pb-40 relative mb-96'>
