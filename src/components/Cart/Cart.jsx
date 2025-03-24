@@ -1,14 +1,30 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { ProductContext } from '../Context/ProductContext';
 import { Link } from 'react-router-dom';
 import CartItem from '../cartItem/cartItem';
+import { FaSortAmountDown } from "react-icons/fa";
+
 
 const Cart = () => {
 
     const { cartProduct } = useContext(ProductContext)
     console.log(cartProduct);
 
-    // 
+    const [mainProduct, setMainProduct] = useState(cartProduct)
+    const handleSortByPrice = () => {
+        const sortedProducts = [...cartProduct].sort((a, b) => b.price - a.price)
+        setMainProduct(sortedProducts)
+    }
+
+    let totalPrice = 0;
+
+    for (const product of cartProduct) {
+        // console.log(product.price);
+        totalPrice += product.price
+    }
+
+
+
     return (
         <div>
 
@@ -24,9 +40,21 @@ const Cart = () => {
                 </div>
             </div>
             <div>
-            <h3 className='text-2xl font-bold text-slate-600'>Your Cart</h3>
+                <div className='w-10/12 flex justify-between mx-auto mt-4'>
+                    <h3 className='text-2xl font-bold text-slate-600'>Your Cart</h3>
+                    <div className='flex space-x-4 items-center'>
+                        <span className='font-bold text-xl text-slate-600'>Total Cost: ${totalPrice}</span>
+                        <div className='border-[#9538E2] border px-4 py-1 rounded-md text-[#9538E2] hover:bg-[#9538E2] hover:text-white flex items-center space-x-2'>
+                            <button onClick={handleSortByPrice} className=''>Sort By Price </button>
+                            <FaSortAmountDown />
+                        </div>
+                        <button className='border-[#9538E2] border px-4 py-1 rounded-md text-[#9538E2] hover:bg-[#9538E2] hover:text-white'>Purchase</button>
+
+                    </div>
+                </div>
+
                 {
-                    cartProduct.map(product => <CartItem key={product.product_id}
+                    mainProduct?.map(product => <CartItem key={product.product_id}
                         product={product}
                     ></CartItem>)
                 }

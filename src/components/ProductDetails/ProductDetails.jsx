@@ -3,7 +3,7 @@ import { FaHeart, FaRegStar, FaStar } from 'react-icons/fa6';
 import Rating from 'react-rating';
 import { useLoaderData, useParams } from 'react-router-dom';
 import { ProductContext } from '../Context/ProductContext';
-import { toast } from 'react-toastify';
+import { Bounce, toast } from 'react-toastify';
 // var Rating = require('react-rating');
 const ProductDetails = () => {
     const { id } = useParams()
@@ -18,9 +18,29 @@ const ProductDetails = () => {
 
 
     const handleSetProductToContext = (product) => {
+        for (const singleProduct of cartProduct) {
+            if (singleProduct.product_id === product.product_id) {
+                toast.error('This product is already added to the cart', {
+                    position: "top-center",
+                    autoClose: 1000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    transition: Bounce,
+                });
+                return;
+            }
+        }
+
         setCartProduct([...cartProduct, product])
 
-        toast(`SuccessFully Added To Cart ${product_title}`)
+        toast.success(`${product_title} Successfully Added To The Cart`, {
+            position: "top-center",
+            autoClose: 1000,
+        })
     }
     console.log(cartProduct);
 
