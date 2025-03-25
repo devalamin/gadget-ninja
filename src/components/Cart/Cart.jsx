@@ -1,16 +1,19 @@
 import React, { useContext, useState } from 'react';
 import { ProductContext } from '../Context/ProductContext';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import CartItem from '../cartItem/cartItem';
 import { FaSortAmountDown } from "react-icons/fa";
+import Swal from 'sweetalert2';
 
 
 const Cart = () => {
 
+    let navigate = useNavigate()
     const { cartProduct, setCartProduct } = useContext(ProductContext)
 
 
     const [mainProduct, setMainProduct] = useState(cartProduct)
+    const [disabled, setDisabled] = useState(false)
 
     const handleSortByPrice = () => {
         const sortedProducts = [...mainProduct].sort((a, b) => b.price - a.price)
@@ -27,6 +30,23 @@ const Cart = () => {
         const remainingItems = mainProduct.filter(product => product.product_id !== id)
         setMainProduct(remainingItems)
         setCartProduct(remainingItems)
+    }
+
+    const handlePurchase = () => {
+        setMainProduct([])
+        setCartProduct([])
+        setDisabled(!disabled)
+
+        Swal.fire({
+            title: "Purchased Successfully",
+            text: "You Bought Everything From Cart",
+            icon: "success",
+
+        }).then(() => {
+            navigate('/')
+        })
+
+
     }
 
 
@@ -54,7 +74,11 @@ const Cart = () => {
                             <button onClick={handleSortByPrice} className=''>Sort By Price </button>
                             <FaSortAmountDown />
                         </div>
-                        <button className='border-[#9538E2] border px-4 py-1 rounded-md text-[#9538E2] hover:bg-[#9538E2] hover:text-white'>Purchase</button>
+                        <button disabled={disabled} id='purchase-btn' onClick={handlePurchase} className='border-[#9538E2] 
+                        border px-4 py-1 rounded-md text-[#9538E2] hover:bg-[#9538E2]
+                         hover:text-white disabled:cursor-not-allowed 
+                         disabled:bg-slate-600 disabled:text-black disabled:border-slate-600'
+                        >Purchase</button>
 
                     </div>
                 </div>
@@ -66,6 +90,7 @@ const Cart = () => {
                     ></CartItem>)
                 }
             </div>
+
 
         </div>
     );
