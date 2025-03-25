@@ -38,7 +38,7 @@ const Cart = () => {
         setDisabled(!disabled)
 
         Swal.fire({
-            title: "Purchased Successfully",
+            title: "Payment Successful",
             text: "You Bought Everything From Cart",
             icon: "success",
 
