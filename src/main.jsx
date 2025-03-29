@@ -8,6 +8,8 @@ import ErrorPage from './components/ErrorPage/ErrorPage.jsx'
 import ProductDetails from './components/ProductDetails/ProductDetails.jsx'
 import Home2 from './components/Home2/Home2.jsx'
 import Cart from './components/Cart/Cart.jsx'
+import Login from './components/Login/Login.jsx'
+import Register from './components/Register/Register.jsx'
 
 
 
@@ -29,6 +31,14 @@ const router = createBrowserRouter([
       {
         path:'/cart',
         element:<Cart></Cart>
+      },
+      {
+        path:'/login',
+        element:<Login></Login>
+      },
+      {
+        path:'/register',
+        element:<Register></Register>
       }
     ]
   }

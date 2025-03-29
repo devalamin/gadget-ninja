@@ -21,7 +21,9 @@ const NavBar = () => {
                         <NavLink>Dashboard</NavLink>
                     </div>
                     <div>
-                        <div className='flex text-2xl space-x-4'>
+                        <div className='flex text-2xl space-x-4 items-center'>
+                            <Link className='text-sm text-white' to='/login'>Login</Link>
+                            <Link className='text-sm text-white' to='/register'>Sign Up</Link>
                             <Link to='/cart'><FaCartArrowDown className='text-black bg-white h-10 w-10 p-2 rounded-full' /></Link>
                             <CiHeart className='text-black bg-white h-10 w-10 p-2 rounded-full'></CiHeart>
                         </div>
