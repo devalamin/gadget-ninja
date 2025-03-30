@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { FaCartArrowDown } from "react-icons/fa6";
 import { CiHeart } from "react-icons/ci";
 import Banner from '../Banner/Banner';
+import { UserContext } from '../Home/Home';
 
 const NavBar = () => {
 
     const location = useLocation()
-
+    const { user } = useContext(UserContext)
+    console.log(user);
     return (
         <>
             <div className={`bg-[#9538E2] ${location.pathname !== "/" && "bg-slate-300"} transition-colors duration-300 sticky top-0 z-10`}>
@@ -22,8 +24,14 @@ const NavBar = () => {
                     </div>
                     <div>
                         <div className='flex text-2xl space-x-4 items-center'>
-                            <Link className='text-sm text-white' to='/login'>Login</Link>
-                            <Link className='text-sm text-white' to='/register'>Sign Up</Link>
+                            <div>
+                                {
+                                    user ? <div className='flex space-x-5 text-sm text-white'><p>Hello, <span className='font-bold italic'>{user?.displayName}</span></p> <button className='text-sm text-white'>Log Out</button></div> : <div className='space-x-2'>
+                                        <Link className='text-sm text-white' to='/login'>Login</Link>
+                                        <Link className='text-sm text-white' to='/register'>Sign Up</Link>
+                                    </div>
+                                }
+                            </div>
                             <Link to='/cart'><FaCartArrowDown className='text-black bg-white h-10 w-10 p-2 rounded-full' /></Link>
                             <CiHeart className='text-black bg-white h-10 w-10 p-2 rounded-full'></CiHeart>
                         </div>
