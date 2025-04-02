@@ -1,17 +1,19 @@
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
-import React, { createContext, useContext, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { FaGithub, FaGoogle, FaTwitter } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase/firebase.init';
 import { UserContext } from '../Home/Home';
 
 
 const Login = () => {
 
+    const navigate = useNavigate()
+
     const [error, setError] = useState("");
 
     const { setUser } = useContext(UserContext)
-    
+
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -25,6 +27,7 @@ const Login = () => {
             .then(result => {
                 console.log(result.user);
                 setUser(result.user)
+                navigate('/')
             })
             .catch(error => {
                 console.log(error);
