@@ -1,9 +1,10 @@
-import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
-import React, { useContext, useState } from 'react';
+import { GoogleAuthProvider, signInWithPopup, signInWithEmailAndPassword, sendPasswordResetEmail } from 'firebase/auth';
+import React, { useContext, useRef, useState } from 'react';
 import { FaGithub, FaGoogle, FaTwitter } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase/firebase.init';
 import { UserContext } from '../Home/Home';
+
 
 
 const Login = () => {
@@ -17,6 +18,18 @@ const Login = () => {
 
     const handleLogin = (e) => {
         e.preventDefault();
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+        console.log(email, password);
+        signInWithEmailAndPassword(auth, email, password)
+            .then(result => {
+                console.log(result.user);
+
+                setUser(result.user)
+            })
+            .catch(error => {
+                console.log('ERROR', error);
+            })
 
     };
 
@@ -34,6 +47,16 @@ const Login = () => {
                 setError(error.message)
             })
     }
+    const emailRef = useRef()
+
+    const handleForgetPassword = () => {
+        console.log()
+        const email = emailRef.current.value
+        sendPasswordResetEmail(auth, email)
+        .then(()=>{
+            console.log('Reset email sent to your mail');
+        })
+    }
 
     return (
         <div className="flex justify-center items-center min-h-screen bg-gray-100">
@@ -43,6 +66,7 @@ const Login = () => {
                     <div className="mb-4">
                         <label className="block text-gray-700">Email</label>
                         <input
+                            ref={emailRef}
                             type="email"
                             className="input input-bordered w-full mt-1"
                             placeholder="Enter your email"
@@ -61,6 +85,7 @@ const Login = () => {
                         />
                     </div>
                     <button type="submit" className="btn btn-primary w-full mb-2">Login</button>
+                    <p onClick={handleForgetPassword} className='cursor-pointer'>Forget Password</p>
                 </form>
                 <div className="divider">OR</div>
                 <button onClick={handleGoogleLogin} className="btn btn-outline w-full mb-2">Login with Google <FaGoogle className='text-[#EA4335]' /> </button>

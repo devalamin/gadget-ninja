@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, sendEmailVerification } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
 import auth from '../../firebase/firebase.init';
 import { UserContext } from '../Home/Home';
@@ -24,6 +24,7 @@ const Register = () => {
         const password = e.target.password.value
         if (password.length < 6) {
             setError('Password should be 6 characters or longer')
+
             return;
         }
         if (!regex.test(password)) {
@@ -36,6 +37,11 @@ const Register = () => {
                 setUser(result.user);
                 // navigate('/')
                 toast.success('User Account Created Successfully')
+
+                sendEmailVerification(auth.currentUser)
+                    .then(() => {
+                        console.log('verification mail sent');
+                    })
             })
             .catch(error => {
                 console.log(error);
